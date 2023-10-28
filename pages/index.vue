@@ -17,11 +17,40 @@
                 <div class="card">
                     <div class="card-header">
                         <img :src="book.cover" alt="cover" class="cover">
-                        <div>{{ book.judul }}</div>
-                </div>
+                        <div v-for="item in items" :key="item.id">
+                            {{ item }}
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
+
+        <!-- table -->
+    <!-- <div class="container">
+      <table class="table table-striped table-light mt-4">
+        <thead>
+          <tr>
+            <td>COVER</td>
+            <td>JUDUL</td>
+            <td>PENULIS</td>
+            <td>PENERBIT</td>
+            <td>KATEGORI</td>
+            <td>RAK</td>
+          </tr>
+        </thead>
+        <tbody>
+          <tr v-for="book in books" :key="book.id">
+            <td><img :src="book.cover" alt=""></td>
+            <td>{{ book.judul }}</td>
+            <td>{{ book.penulis }}</td>
+            <td>{{ book.penerbit }}</td>
+            <td>{{ book.kategori.nama }}</td>
+            <td>{{ book.rak.kode }}</td>
+          </tr>
+        </tbody>
+      </table>
+    </div> -->
+
 
     </div>
 </template>
@@ -49,6 +78,6 @@ async function getData() {
 
 <style scoped>
 .cover {
-    width: 100px;
+    width: 100%;
 }
 </style>

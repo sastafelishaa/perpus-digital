@@ -1,5 +1,5 @@
 <template>
-    <div class="bg-primary text-white">
+    <div class="bg-primary text-white p-5">
         <div class="container pd-lg-6">
             <div class="row">
                 <div class="col-lg-1 mt-3">
@@ -13,6 +13,7 @@
             </div>
         </div>
     </div>
+    <Navbar />
 </template>
 
 
